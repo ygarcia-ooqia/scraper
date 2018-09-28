@@ -3,7 +3,6 @@ const got = require('got');
 const _ = require('underscore');
 const cheerio = require('cheerio');
 const jsonframe = require('jsonframe-cheerio');
-//const puppeteer = require('puppeteer');
 
 const protocol = 'https';
 const website = 'www.androidpit.es';
@@ -11,13 +10,10 @@ const siteBaseUrl = `${protocol}://${website}`;
 const directoryPath = 'noticias/page/';
 const pages = 1;
 
-//const browser = await puppeteer.launch();
-
 const STATUS_OK = 200;
 const MAX_REQ_PER_BATCH = 5;
 
 const client = got.extend({
-    //rejectUnauthorized: false,
     baseUrl: siteBaseUrl,
     headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36'
