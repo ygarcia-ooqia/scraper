@@ -1,0 +1,47 @@
+{
+    "website": "fortune.com",
+    "initTime": "2018-9-28 17:09:53",
+    "endTime": "2018-9-28 17:09:54",
+    "data": {
+        "name": "Walmart",
+        "previousRank": "1",
+        "revenue": "$500,343",
+        "revenueChange": "3.0%",
+        "profits": "$9,862.0",
+        "profitsChange": "-27.7%",
+        "assets": "$204,522",
+        "mktValue": "$263,563",
+        "employees": "2,300,000",
+        "overview": "Walmart has been pruning the less productive parts of its business, such as selling its Asda business in Britain and closing 63 Sam’s Club locations in the U.S., to better focus on areas of growth. Its Walmart business in the U.S. is transforming its website into an online mall offering a slew of brands and expanding its grocery delivery, while the shuttered Sam’s Clubs will be repurposed as e-commerce distribution centers to speed up delivery. Meanwhile, Walmart is making big moves in both China and India, looking to rev up international growth again.",
+        "ceo": "C. Douglas McMillon",
+        "ceoTitle": "President, Chief Executive Officer & Director",
+        "sector": "Retailing",
+        "industry": "General Merchandisers",
+        "hqLocation": "Bentonville, Ark.",
+        "website": "www.stock.walmart.com",
+        "yearOnFortuneFiveHundrerList": "24",
+        "keyFinancials": [
+            {},
+            {
+                "title": "Revenues ($M)",
+                "value": "$500,343"
+            },
+            {
+                "title": "Profits ($M)",
+                "value": "$9,862.0"
+            },
+            {
+                "title": "Assets ($M)",
+                "value": "$204,522"
+            },
+            {
+                "title": "Total Stockholder Equity ($M)",
+                "value": "$77,869"
+            },
+            {
+                "title": "Market Value — as of March 29, 2018 ($M)",
+                "value": "$263,563"
+            }
+        ]
+    }
+}
