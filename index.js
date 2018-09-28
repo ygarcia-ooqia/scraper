@@ -53,23 +53,12 @@ const sleep = function(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// globalTunnel.initialize({
-//     host: '127.0.0.1',
-//     port: 8888,
-//     protocol: 'http:',
-// });
-
 let result = [];
 let scraperID = (new Date().getTime());
 let initTime = new Date().toLocaleString();
 (async() => {
     for (let i = 0; i < pages; i++) {
         let directoryPageUrl = `${directoryPath}${(i + 1)}`;
-
-
-        //const page = await browser.newPage();
-        //let response = await page.goto(directoryPageUrl);
-        //let content = await page.content();
 
         let directoryPageResponse = await client(directoryPageUrl);
         if (directoryPageResponse.statusCode === STATUS_OK) {
@@ -120,5 +109,5 @@ let initTime = new Date().toLocaleString();
         resultsCount: result.length,
         result
     };
-    fs.writeFile(`output/${website}-${scraperID}.json`, JSON.stringify(output, null, 4));
+    fs.writeFile(`${website}-${scraperID}.json`, JSON.stringify(output, null, 4));
 })();
