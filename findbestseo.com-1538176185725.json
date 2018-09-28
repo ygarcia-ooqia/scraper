@@ -1,0 +1,100 @@
+{
+    "website": "findbestseo.com",
+    "initTime": "2018-9-28 17:09:45",
+    "endTime": "2018-9-28 17:09:46",
+    "data": {
+        "name": "DMA: Digital Marketing Agency",
+        "website": "https://www.digitalmarketingagency.com?utm_source=FindBestSEO",
+        "logourl": "https://findbestseo.com/sites/default/files/styles/company_logo_big/public/companies/snap5.jpg?itok=JKZAiH8R",
+        "overallScore": "94.92%",
+        "address": "Address: 6203 San Ignacio Ave ,, San Jose, CA",
+        "phone": "Phone:800-569-2754",
+        "annualAwwards": [
+            {
+                "title": "Awards for Best SMO Companies - Best of 2017",
+                "awward": "9th Place in Best SMO Companies of 2017",
+                "url": "/awards/2017/10-best-smo-companies"
+            },
+            {
+                "title": "Awards for Best Web Design - Best of 2017",
+                "awward": "9th Place in Best Web Design of 2017",
+                "url": "/"
+            },
+            {
+                "title": "Awards for Best Conversion Rate Optimization - Best of 2017",
+                "awward": "9th Place in Best Conversion Rate Optimization of 2017",
+                "url": "/"
+            },
+            {
+                "title": "Awards for Best Content Marketing - Best of 2017",
+                "awward": "6th Place in Best Content Marketing of 2017",
+                "url": "/"
+            }
+        ],
+        "monthlyAwwards": [
+            {
+                "title": "Awards for Best SEO Companies Sep 2018",
+                "awward": "3rd Place in Best SEO Companies for Sep 2018",
+                "url": "/awards/10-best-seo-companies"
+            },
+            {
+                "title": "Awards for Best SEM Companies Sep 2018",
+                "awward": "1st Place in Best SEM Companies for Sep 2018",
+                "url": "/awards/10-best-sem-companies"
+            },
+            {
+                "title": "Awards for Best Enterprise SEO Sep 2018",
+                "awward": "1st Place in Best Enterprise SEO for Sep 2018",
+                "url": "/awards/10-best-enterprise-seo-companies"
+            },
+            {
+                "title": "Awards for Best Reputation Management Sep 2018",
+                "awward": "1st Place in Best Reputation Management for Sep 2018",
+                "url": "/awards/10-best-reputation-management-companies"
+            },
+            {
+                "title": "Awards for Best Web Design Sep 2018",
+                "awward": "9th Place in Best Web Design for Sep 2018",
+                "url": "/"
+            },
+            {
+                "title": "Awards for Best Conversion Rate Optimization Sep 2018",
+                "awward": "9th Place in Best Conversion Rate Optimization for Sep 2018",
+                "url": "/"
+            },
+            {
+                "title": "Awards for Best SEO Companies Aug 2018",
+                "awward": "1st Place in Best SEO Companies for Aug 2018",
+                "url": "/awards/10-best-seo-companies"
+            },
+            {
+                "title": "Awards for Best Enterprise SEO Aug 2018",
+                "awward": "1st Place in Best Enterprise SEO for Aug 2018",
+                "url": "/awards/10-best-enterprise-seo-companies"
+            },
+            {
+                "title": "Awards for Best Reputation Management Aug 2018",
+                "awward": "2th Place in Best Reputation Management for Aug 2018",
+                "url": "/awards/10-best-reputation-management-companies"
+            },
+            {
+                "title": "Awards for Best Conversion Rate Optimization Aug 2018",
+                "awward": "6th Place in Best Conversion Rate Optimization for Aug 2018",
+                "url": "/"
+            }
+        ],
+        "companyDescription": "DMA knows business and what it takes to reach higher levels of success. As a full-service marketing agency, DMA creates efficiencies for your organization by taking your entire project from start to finish for faster results and reduced costs. As your goals are met you’ll have greater resources to promote further growth toward even higher profits.",
+        "services": [
+            "Content Marketing",
+            "Conversion Rate Optimization",
+            "Enterprise SEO",
+            "Local SEO",
+            "PPC",
+            "Reputation Management",
+            "SEM",
+            "SEO",
+            "SMO",
+            "Web Design"
+        ]
+    }
+}
