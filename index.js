@@ -3,7 +3,6 @@ const got = require('got');
 const _ = require('underscore');
 const cheerio = require('cheerio');
 const jsonframe = require('jsonframe-cheerio');
-//const puppeteer = require('puppeteer');
 
 const protocol = 'https';
 const website = 'www.androidpit.es';
@@ -11,13 +10,10 @@ const siteBaseUrl = `${protocol}://${website}`;
 const directoryPath = 'noticias/page/';
 const pages = 1;
 
-//const browser = await puppeteer.launch();
-
 const STATUS_OK = 200;
 const MAX_REQ_PER_BATCH = 5;
 
 const client = got.extend({
-    //rejectUnauthorized: false,
     baseUrl: siteBaseUrl,
     headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36'
@@ -53,23 +49,12 @@ const sleep = function(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// globalTunnel.initialize({
-//     host: '127.0.0.1',
-//     port: 8888,
-//     protocol: 'http:',
-// });
-
 let result = [];
 let scraperID = (new Date().getTime());
 let initTime = new Date().toLocaleString();
 (async() => {
     for (let i = 0; i < pages; i++) {
         let directoryPageUrl = `${directoryPath}${(i + 1)}`;
-
-
-        //const page = await browser.newPage();
-        //let response = await page.goto(directoryPageUrl);
-        //let content = await page.content();
 
         let directoryPageResponse = await client(directoryPageUrl);
         if (directoryPageResponse.statusCode === STATUS_OK) {
@@ -120,5 +105,5 @@ let initTime = new Date().toLocaleString();
         resultsCount: result.length,
         result
     };
-    fs.writeFile(`output/${website}-${scraperID}.json`, JSON.stringify(output, null, 4));
+    fs.writeFile(`${website}-${scraperID}.json`, JSON.stringify(output, null, 4));
 })();
