@@ -1,14 +1,15 @@
-/// EASY: https://www.digimarketingagencies.com/ld_1608_New-A-Marketing.aspx
+/// MEDIUM: https://www.digimarketingagencies.com/ld_601_Enfuse-Creative-Design.aspx
 
 const fs = require('fs');
 const got = require('got');
 const cheerio = require('cheerio');
 const jsonframe = require('jsonframe-cheerio');
+const _ = require('underscore');
 
 const protocol = 'https';
 const website = 'www.digimarketingagencies.com';
 const siteBaseUrl = `${protocol}://${website}`;
-const profilePath = '/ld_1608_New-A-Marketing.aspx';
+const profilePath = '/ld_601_Enfuse-Creative-Design.aspx';
 
 const STATUS_OK = 200;
 
@@ -21,18 +22,16 @@ const client = got.extend({
 
 const profileJsonFrame = {
     name: '#ContentPlaceHolder1_repDetails_lblCompany_0',
-    companyOverview: '#slb-content > div.clearfix.row-fluid > div.span12.sbm-details.member-detail > div.detail-list > div.businessimage > div.leftdiv > div > p:nth-child(3)',
-    logourl: 'figure.img-left img @ src',
     streetAddress: '#ContentPlaceHolder1_repDetails_lblstreetaddress_0',
     addressLocality: '#ContentPlaceHolder1_repDetails_lblCity_0',
-    yearStablished: '#ContentPlaceHolder1_repDetails_lblyear_0',
     phone: '.phoneicon',
     website: '.sbm-web @ href',
+    logourl: 'figure.img-left img @ src',
+    yearStablished: '#ContentPlaceHolder1_repDetails_lblyear_0',
     social: {
         facebook: '#slb-content > div.clearfix.row-fluid > div.span12.sbm-details.member-detail > div.detail-list > div.businessimage > div.rightdiv > div.usersocial > a:nth-child(1) @ href',
-        linkedin: '#slb-content > div.clearfix.row-fluid > div.span12.sbm-details.member-detail > div.detail-list > div.businessimage > div.rightdiv > div.usersocial > a:nth-child(2) @ href',
+        googlePlus: '#slb-content > div.clearfix.row-fluid > div.span12.sbm-details.member-detail > div.detail-list > div.businessimage > div.rightdiv > div.usersocial > a:nth-child(2) @ href',
         twitter: '#slb-content > div.clearfix.row-fluid > div.span12.sbm-details.member-detail > div.detail-list > div.businessimage > div.rightdiv > div.usersocial > a:nth-child(3) @ href',
-        youtube: '#slb-content > div.clearfix.row-fluid > div.span12.sbm-details.member-detail > div.detail-list > div.businessimage > div.rightdiv > div.usersocial > a:nth-child(4) @ href',
     }
 };
 
@@ -47,7 +46,11 @@ let initTime = new Date().toLocaleString();
         jsonframe($);
 
         let data = $('body').scrape(profileJsonFrame);
-        data.logourl = `${siteBaseUrl}/${data.logourl}`;
+        data.companyOverview = _.map($('.detailContent p'), (item) => $(item).text());
+
+        data.services = _.map($('.services li'), (item) => $(item).text());
+        data.additionalInformation = _.map($('#ContentPlaceHolder1_repDetails_lbladditionalInformation_0 p'), (item) => $(item).text());
+        data.paymentTypes = $('#ContentPlaceHolder1_repDetails_lblpay_0').text();
 
         let endTime = new Date().toLocaleString();
         let output = {
