@@ -1,26 +1,27 @@
 {
-    "name": "scraper",
-    "version": "1.0.0",
-    "description": "Scraper boilerplate",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "eslint": "./node_modules/.bin/eslint index.js",
-        "scrap": "node index.js",
-        "scrappeteer": "node scrappeteer.js"
-    },
-    "author": "OOQIA DEV",
-    "license": "ISC",
-    "dependencies": {
-        "cheerio": "^1.0.0-rc.2",
-        "got": "^9.2.2",
-        "jsonframe-cheerio": "^3.0.1",
-        "puppeteer": "^1.8.0",
-        "underscore": "^1.9.1"
-    },
-    "devDependencies": {
-        "eslint": "^5.6.1",
-        "eslint-config-airbnb-base": "^13.1.0",
-        "eslint-plugin-import": "^2.14.0"
-    }
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "Scraper boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "./node_modules/.bin/eslint index.js",
+    "eslinttop": "./node_modules/.bin/eslint topdigital.js",
+    "scrap": "node index.js",
+    "scrappeteer": "node scrappeteer.js"
+  },
+  "author": "OOQIA DEV",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "got": "^9.2.2",
+    "jsonframe-cheerio": "^3.0.1",
+    "puppeteer": "^1.8.0",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
 }
